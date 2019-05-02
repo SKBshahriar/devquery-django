@@ -41,7 +41,7 @@ class RegisterView(TemplateView):
             UserInfo.objects.create(image=image, user=user, profile_tag="user")
         else:
             UserInfo.objects.create(user=user, profile_tag="user")
-        return HttpResponse("User created successfully")
+        return redirect('login')
 
 
 class Logout(TemplateView):
